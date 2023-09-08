@@ -1,5 +1,9 @@
 ---
-const { pageTitle } = Astro.props;
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.svelte";
+import { ViewTransitions } from 'astro:transitions';
+
+const { title } = Astro.props;
 ---
 
 <html lang="en" class="text-black bg-[#A89B8C] font-san">
@@ -7,14 +11,15 @@ const { pageTitle } = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{ pageTitle }</title>
+    <title>{ title }</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <ViewTransitions />
   </head>
   <body>
-    <main>
-      <slot />
-    </main>
+    <Navbar />
+      <slot>Work in Progress</slot>
+    <Footer />
   </body>
 </html>
 

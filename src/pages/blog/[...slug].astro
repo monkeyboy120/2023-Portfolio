@@ -1,6 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
-import MainLayout from '../../layouts/MainLayout.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 
 const { slug } = Astro.params;
 if(slug === undefined) {
@@ -16,6 +16,6 @@ if (entry === undefined) {
 const { Content } = await entry.render();
 ---
 
-<MainLayout>
+<BlogLayout>
   <Content />
-</MainLayout>
+</BlogLayout>
