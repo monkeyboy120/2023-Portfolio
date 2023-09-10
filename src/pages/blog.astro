@@ -34,8 +34,14 @@ blogEntries.sort(function (a, b) {
                   decoding={index <= 2 ? "sync" : "async"}
                   class="w-full rounded-md"
                 />
-                <div>
-          
-                
+                  <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
+                    {blogPostEntry.data.title}
+                  </h2>
+              </div>
+            </a>
+          </li>
         })
       }
+    </ul>
+  </main>
+</MainLayout>
